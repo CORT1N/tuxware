@@ -1,6 +1,8 @@
 # Miscellanous
+**/.DS_Store
 **/__pycache__
 
 # App
+client/volumes/data/tux_msg.png
 server/volumes/data/keys
 server/volumes/data/uploads
