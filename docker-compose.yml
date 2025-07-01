@@ -1,0 +1,20 @@
+---
+services:
+  penguinet:
+    build: ./server
+    # To make it accessible from outside the container, uncomment the ports section
+    # ports:
+    #   - "5000:5000"
+    volumes:
+      - ./server/volumes/data:/data
+
+  tuxware:
+    build: ./client
+    depends_on:
+      - penguinet
+    volumes:
+      - ./client/volumes/data:/data
+    environment:
+      - SERVER_URL=http://penguinet:5000
+      - TARGET_DIR=/data
+...

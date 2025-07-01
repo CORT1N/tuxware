@@ -1,0 +1,6 @@
+# Miscellanous
+**/__pycache__
+
+# App
+server/volumes/data/keys
+server/volumes/data/uploads

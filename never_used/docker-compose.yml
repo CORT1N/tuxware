@@ -1,0 +1,11 @@
+---
+services:
+  detux:
+    build: .
+    volumes:
+      - ../client/volumes/data:/data
+      - ../server/volumes/data/keys:/keys
+    environment:
+      - KEY_FILE=/keys/a91b4fc994d6.key
+      - TARGET_DIR=/data
+...

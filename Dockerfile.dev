@@ -1,0 +1,12 @@
+FROM python:3.13.5-alpine3.22
+
+WORKDIR /workspace
+
+COPY server/requirements.txt ./requirements-penguinet.txt
+COPY client/requirements.txt ./requirements-tuxware.txt
+
+RUN pip install --no-cache-dir -r requirements-penguinet.txt \
+    && pip install --no-cache-dir -r requirements-tuxware.txt \
+    && apk add --no-cache \
+    git=2.49.0-r0 \
+    zip=3.0-r13
